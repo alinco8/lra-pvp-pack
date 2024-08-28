@@ -31,8 +31,7 @@ execute as @e[tag=tuta_pos] at @s positioned ~ ~-1.5 ~ store result score @e[tag
 
 execute as @e[tag=tuta_pos] at @s positioned ~ ~-1.5 ~ store result score @e[tag=tutablock,limit=1,sort=nearest] id run scoreboard players get @s id
 
-#つた発生のパーティクル
-execute as @e[tag=tuta_pos,scores={tutatime=297..300}] at @s positioned ~ ~ ~ run particle dust 0.5 0.5 0.5 1 ~ ~-1 ~ 0.5 0.5 0.5 0 10 normal @a
+particle dust 0.5 0.5 0.5 1 ~ ~-1 ~ 0.5 0.5 0.5 0 10 normal @a
 
 
 #範囲外に出たプレーヤーの浮遊削除

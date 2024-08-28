@@ -1,4 +1,4 @@
-tag @a[scores={deaht=0}] add survivor
+tag @a[scores={death=0}] add survivor
 
 scoreboard players set survivor survivor 0
 execute as @a[tag=survivor] run scoreboard players add survivor survivor 1

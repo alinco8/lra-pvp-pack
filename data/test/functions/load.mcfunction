@@ -1,5 +1,8 @@
 say スコアリロードしました
 
+
+scoreboard objectives add Temp dummy
+
 scoreboard objectives add id dummy
 #にんじん棒の右クリ用スコア作成 use
 scoreboard objectives add use minecraft.used:minecraft.carrot_on_a_stick
@@ -24,7 +27,7 @@ scoreboard objectives add effecttime dummy
 #effecttime リセット
 scoreboard players set @a effecttime 0
 #スノウゴーレムを殺した数スコア 作成
-scoreboard objectives add snowgolemkill minecraft.killed:minecraft.snow_golem 
+scoreboard objectives add snowgolemkill minecraft.killed:minecraft.snow_golem
 #snowgolemkillスコア リセット
 scoreboard players set @a snowgolemkill 0
 #デバッグ用スコア作成
@@ -34,7 +37,7 @@ scoreboard objectives add firedamage dummy
 #firedamageのスコア リセット
 scoreboard players set @a firedamage 0
 #ヴェックスを殺した数スコア 作成
-scoreboard objectives add vexkill minecraft.killed:minecraft.vex 
+scoreboard objectives add vexkill minecraft.killed:minecraft.vex
 #
 scoreboard players set @a vexkill 0
 #地面を走っている時増加するスコア 作成
@@ -57,3 +60,7 @@ scoreboard objectives add skillselect dummy
 scoreboard objectives add click minecraft.custom:minecraft.talked_to_villager
 #
 scoreboard players set @a click 0
+
+scoreboard objectives add battou dummy
+#
+scoreboard players set @a battou 0

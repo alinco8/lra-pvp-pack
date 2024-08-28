@@ -1,0 +1,1 @@
+execute as @s at @s positioned ^ ^ ^1 run tag @e[tag=battoukyori,limit=1,sort=nearest] add tppoint

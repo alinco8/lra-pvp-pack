@@ -22,4 +22,4 @@ clear @a[scores={actiontime=0}] diamond_axe
 
 scoreboard players set @a[tag=hunter,scores={vexkill=1}] vexkill 0
 
-scoreboard players set @a[scores={use=1}] use 0
+scoreboard players set @a[scores={use=1},tag=hunter] use 0

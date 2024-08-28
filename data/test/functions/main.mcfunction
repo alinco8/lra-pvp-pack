@@ -5,5 +5,3 @@ function test:skillsystem
 function test:skillsystemscore
 function test:gimmick
 function test:skillsystemselect
-
-scoreboard players set @a use 0
