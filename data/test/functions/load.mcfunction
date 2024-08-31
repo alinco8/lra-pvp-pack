@@ -49,9 +49,9 @@ scoreboard objectives add runcount dummy
 #runcountスコア リセット
 scoreboard players set @a runcount 0
 #デス数カウントスコア 作成
-scoreboard objectives add deaht deathCount
+scoreboard objectives add death deathCount
 #deahtスコア リセット
-scoreboard players set @a deaht 0
+scoreboard players set @a death 0
 #残り人数スコア 作成
 scoreboard objectives add survivor dummy
 #
@@ -64,3 +64,7 @@ scoreboard players set @a click 0
 scoreboard objectives add battou dummy
 #
 scoreboard players set @a battou 0
+
+scoreboard objectives add game_running dummy
+
+scoreboard players set @a game_running 0

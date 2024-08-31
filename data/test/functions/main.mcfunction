@@ -1,7 +1,7 @@
 #コマンド入れ子
-function test:startsystem
-function test:playersystem
-function test:skillsystem
-function test:skillsystemscore
+execute if score global game_running matches 1 if score global survivor matches 1 run function test:system/endsystem
+function test:system/playersystem
+function test:system/skillsystem/skillsystem
+function test:system/skillsystem/skillsystemscore
 function test:gimmick
-function test:skillsystemselect
+function test:system/skillsystem/skillsystemselect
