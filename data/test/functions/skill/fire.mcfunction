@@ -14,11 +14,14 @@ execute as @e[tag=firepower] at @s positioned ^0.7 ^ ^-0.3 run effect give @e[ta
 execute as @e[tag=firepower] at @s positioned ^-0.7 ^ ^-0.3 run effect give @e[tag=!firepower,distance=0.5..1.2] instant_damage 1 0
 
 execute as @e[tag=firepower] at @s run kill @e[distance=..2,tag=tutablock]
-execute as @e[tag=firepower] at @s run kill @e[distance=..3.5,tag=tutablockdisplay]
+execute as @e[tag=firepower] at @s run kill @e[distance=..2,tag=tutablockdisplay]
 
 execute as @e[tag=firepower] at @s run tp @e[tag=tutashulker,distance=..3] ~ ~100 ~
 #焦げた苔のブロックエンティティ召喚
-execute as @e[tag=tutablock] at @s positioned ~-0.5 ~ ~-0.5 unless entity @e[type=block_display,distance=..0.3] if entity @e[tag=firepower,distance=..5] run summon block_display ~ ~ ~ {block_state:{Name:"minecraft:coal_block"},Tags:["grass","tutablockdisplay"]}
+#execute as @e[tag=tutablock] at @s positioned ~-0.5 ~ ~-0.5 unless entity @e[type=block_display,distance=..0.3] if entity @e[tag=firepower,distance=..5] run summon block_display ~ ~ ~ {block_state:{Name:"minecraft:coal_block"},Tags:["grass","tutablockdisplay",]}
+
+execute as @e[tag=firepower] at @s run data modify entity @e[distance=..3.5,tag=tutablockdisplay,sort=nearest,limit=1] block_state.Name set value "minecraft:coal_block"
+
 
 execute as @e[tag=firepower] at @s run particle flame ~ ~ ~ 1.5 1.5 1.5 0.15 50 force @a
 

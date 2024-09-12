@@ -22,6 +22,15 @@ execute as @a[tag=neon,scores={use=1,runcount=180}] run attribute @s minecraft:g
 
 execute as @a[tag=neon,scores={effecttime=0}] run attribute @s minecraft:generic.movement_speed base set 0.1
 
+
+execute as @a[tag=neon,scores={effecttime=1..,runcount=30}] run attribute @s minecraft:generic.attack_damage base set 0.3
+execute as @a[tag=neon,scores={effecttime=1..,runcount=60}] run attribute @s minecraft:generic.attack_damage base set 0.35
+execute as @a[tag=neon,scores={effecttime=1..,runcount=90}] run attribute @s minecraft:generic.attack_damage base set 0.4
+execute as @a[tag=neon,scores={effecttime=1..,runcount=120}] run attribute @s minecraft:generic.attack_damage base set 0.45
+execute as @a[tag=neon,scores={effecttime=1..,runcount=150}] run attribute @s minecraft:generic.attack_damage base set 0.5
+execute as @a[tag=neon,scores={use=1,runcount=180}] run attribute @s minecraft:generic.attack_damage base set 0.55
+
+execute as @a[tag=neon,scores={effecttime=0}] run attribute @s minecraft:generic.attack_damage base set 0.1
 scoreboard players set @a[tag=neon,scores={effecttime=0}] runcount 0
 
 

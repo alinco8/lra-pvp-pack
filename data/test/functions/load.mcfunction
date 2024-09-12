@@ -1,4 +1,4 @@
-say スコアリロードしました
+say スコアをリセットしました
 
 
 scoreboard objectives add Temp dummy
@@ -56,10 +56,6 @@ scoreboard players set @a death 0
 scoreboard objectives add survivor dummy
 #
 scoreboard objectives add skillselect dummy
-#
-scoreboard objectives add click minecraft.custom:minecraft.talked_to_villager
-#
-scoreboard players set @a click 0
 
 scoreboard objectives add battou dummy
 #
@@ -68,3 +64,9 @@ scoreboard players set @a battou 0
 scoreboard objectives add game_running dummy
 
 scoreboard players set @a game_running 0
+
+scoreboard objectives add Tick dummy
+
+scoreboard objectives add itemuse minecraft.used:minecraft.warped_fungus_on_a_stick
+
+scoreboard players set @a itemuse 0
