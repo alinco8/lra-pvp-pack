@@ -1,5 +1,3 @@
-#> test:skill/accelaration
-
 #超加速
 effect give @a[scores={use=1..,cooltime=0},tag=acceleration] speed 1 100 true
 #クールタイム

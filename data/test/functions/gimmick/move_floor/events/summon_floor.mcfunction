@@ -1,0 +1,2 @@
+summon armor_stand ~ ~2 ~ {Tags:["MoveFloor","MoveFloorpoint"],NoGravity:1b,Passengers:[{id:"block_display",block_state:{Name:"quartz_block"},transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[-0.5f,0f,-0.5f]},Tags:["MoveFloor"],Passengers:[{id:"shulker",NoAI:1b,Silent:1b,Tags:["MoveFloor"]}]}]}
+scoreboard players set @e[tag=MoveFloorpoint,limit=1,sort=nearest] actiontime -1

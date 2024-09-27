@@ -1,0 +1,1 @@
+execute as @e[type=potion] at @s run function test:items/floor_drop/bounce_potion

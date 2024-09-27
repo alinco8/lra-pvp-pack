@@ -1,5 +1,3 @@
-say a
-
 execute if score $Global skillselect matches 1 run function test:system/skillsystem/skilldecide/speeddecide
 execute if score $Global skillselect matches 2 run function test:system/skillsystem/skilldecide/levitationdecide
 execute if score $Global skillselect matches 3 run function test:system/skillsystem/skilldecide/invisibilitydecide

@@ -1,0 +1,1 @@
+execute store result score @s ID run random value 1..

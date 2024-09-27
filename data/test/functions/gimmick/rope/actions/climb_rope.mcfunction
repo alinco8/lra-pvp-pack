@@ -1,0 +1,1 @@
+data merge entity @s[scores={Sneak=0}] {Motion:[0.0d,0.3d,0.0d]}

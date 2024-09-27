@@ -1,0 +1,1 @@
+execute as @a at @s positioned ~ ~0.7 ~ if entity @e[distance=..0.4,tag=rope] run function test:gimmick/rope/actions/climb_rope

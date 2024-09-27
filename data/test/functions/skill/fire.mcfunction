@@ -13,18 +13,11 @@ execute as @e[tag=firepower] at @s positioned ~ ~0.7 ~ run effect give @e[tag=!f
 execute as @e[tag=firepower] at @s positioned ^0.7 ^ ^-0.3 run effect give @e[tag=!firepower,distance=0.5..1.2] instant_damage 1 0
 execute as @e[tag=firepower] at @s positioned ^-0.7 ^ ^-0.3 run effect give @e[tag=!firepower,distance=0.5..1.2] instant_damage 1 0
 
-execute as @e[tag=firepower] at @s run kill @e[distance=..2,tag=tutablock]
-execute as @e[tag=firepower] at @s run kill @e[distance=..2,tag=tutablockdisplay]
-
-execute as @e[tag=firepower] at @s run tp @e[tag=tutashulker,distance=..3] ~ ~100 ~
-#焦げた苔のブロックエンティティ召喚
-#execute as @e[tag=tutablock] at @s positioned ~-0.5 ~ ~-0.5 unless entity @e[type=block_display,distance=..0.3] if entity @e[tag=firepower,distance=..5] run summon block_display ~ ~ ~ {block_state:{Name:"minecraft:coal_block"},Tags:["grass","tutablockdisplay",]}
-
-execute as @e[tag=firepower] at @s run data modify entity @e[distance=..3.5,tag=tutablockdisplay,sort=nearest,limit=1] block_state.Name set value "minecraft:coal_block"
+execute as @e[tag=firepower] at @s as @e[tag=TutaDisplay,distance=..2.5] at @s run function test:skill/tuta/events/on_burn_out
+execute as @e[tag=firepower] at @s as @e[tag=TutaDisplay,distance=..4] at @s run function test:skill/tuta/events/on_burn
 
 
 execute as @e[tag=firepower] at @s run particle flame ~ ~ ~ 1.5 1.5 1.5 0.15 50 force @a
-
 execute as @a[tag=fire] at @a if entity @e[tag=firepower] run effect clear @s resistance
 execute as @e[tag=firepower] at @s run effect give @a[limit=1,sort=nearest,dx=0] resistance 1 2 true
 
