@@ -1,4 +1,6 @@
 #コマンド入れ子
+execute as @a[scores={cooltime=1..}] run scoreboard players set @s use 0
+
 execute if score global game_running matches 1 if score global survivor matches 1 run function test:system/endsystem
 function test:system/playersystem
 function test:items/item_main_system
@@ -19,3 +21,5 @@ execute as @a[tag=ParkourEnabled,nbt={OnGround:1b}] run function test:parkour/ev
 
 
 execute as @e[scores={Tick=1..}] run scoreboard players remove @s Tick 1
+
+kill @e[type=minecraft:arrow,nbt={inGround:1b}]

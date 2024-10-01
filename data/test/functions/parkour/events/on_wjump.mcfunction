@@ -12,4 +12,6 @@ execute store result entity @s Motion[2] double 0.01 run scoreboard players oper
 
 kill @e[tag=WJumpTemp]
 
+execute if score @s WJumpUsed matches ..3 run scoreboard players set @s DJumpUsed 0
+
 scoreboard players add @s WJumpUsed 1

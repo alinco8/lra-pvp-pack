@@ -1,3 +1,5 @@
+team join DisablePvP @a
+
 scoreboard objectives setdisplay sidebar
 
 clear @a

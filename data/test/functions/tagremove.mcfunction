@@ -2,7 +2,7 @@
 
 tag @s remove neon
 tag @s remove levitation
-tag @s remove acceleration
+tag @s remove penetrate
 tag @s remove ghosts
 tag @s remove hunter
 tag @s remove fire

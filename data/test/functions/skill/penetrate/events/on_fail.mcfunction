@@ -1,0 +1,1 @@
+playsound block.glass.break master @a ~ ~ ~

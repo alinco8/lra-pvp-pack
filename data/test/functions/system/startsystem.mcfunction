@@ -1,7 +1,7 @@
-function test:system/default_weapon
+#> Selector: Server
 
-execute as @s run gamemode survival
+team leave @a
 
-function test:effects/effectstan
+tag @e[tag=UsedSpawnPoint] remove UsedSpawnPoint
 
-tp @s @e[tag=Spawn,sort=random,limit=1]
+execute as @a at @s run function test:system/init_player

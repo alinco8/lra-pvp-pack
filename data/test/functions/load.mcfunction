@@ -97,3 +97,6 @@ scoreboard objectives add WJumpUsed dummy
 
 scoreboard players set @a WJumpUsed 0
 scoreboard players set @a DJumpUsed 0
+
+team add DisablePvP
+team modify DisablePvP friendlyFire false

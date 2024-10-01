@@ -1,6 +1,8 @@
 #> test:skill/neon
 scoreboard players set @a[tag=neon,scores={use=1}] effecttime 200
 
+scoreboard players set @a[tag=neon,scores={use=1}] cooltime 400
+
 scoreboard players set @a[tag=neon,scores={use=1}] runcount 0
 
 scoreboard players add @a[tag=neon,scores={effecttime=1..,running=1..}] runcount 1
@@ -10,7 +12,7 @@ scoreboard players set @a[tag=neon,scores={effecttime=1..,running=0}] runcount 0
 execute as @a[tag=neon,scores={effecttime=1..,runcount=0}] run attribute @s minecraft:generic.movement_speed base set 0.1
 
 execute as @a[tag=neon,scores={effecttime=199}] run attribute @s minecraft:generic.movement_speed base set 0.2
-effect give @a[scores={use=1..,cooltime=0},tag=neon] jump_boost 8 1 true
+effect give @a[scores={use=1..},tag=neon] jump_boost 8 1 true
 
 execute as @a[tag=neon,scores={effecttime=1..}] run function test:skill/calc
 execute as @a[tag=neon,scores={effecttime=1..,runcount=30}] run attribute @s minecraft:generic.movement_speed base set 0.3
@@ -23,7 +25,6 @@ execute as @a[tag=neon,scores={use=1,runcount=180}] run attribute @s minecraft:g
 execute as @a[tag=neon,scores={effecttime=0}] run attribute @s minecraft:generic.movement_speed base set 0.1
 
 scoreboard players set @a[tag=neon,scores={effecttime=0}] runcount 0
-
 
 scoreboard players set @a[tag=neon] running 0
 
