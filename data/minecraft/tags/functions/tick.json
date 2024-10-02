@@ -1,3 +1,5 @@
 {
-    "values": ["test:main","world:main"]
+    "values": [
+        "test:main"
+    ]
 }

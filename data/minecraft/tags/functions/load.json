@@ -1,3 +1,5 @@
 {
-    "values": ["test:load","world:main"]
+    "values": [
+        "test:load"
+    ]
 }
