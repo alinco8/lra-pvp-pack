@@ -1,37 +1,17 @@
-execute anchored feet positioned ~ ~-0.4 ~ rotated ~ 0 run summon area_effect_cloud ^ ^ ^0.4 {NoGravity:1b,Tags:["DJumpTemp"]}
+execute anchored eyes rotated ~ 0 run summon area_effect_cloud ^ ^ ^0.4 {Tags:["MotionCalcTemp"]}
+function test:libs/pos2score
+execute as @e[tag=MotionCalcTemp] at @s run function test:libs/pos2score
 
-execute store result score $MotionX Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[0] 100
-execute store result score $MotionY Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[1] 100
-execute store result score $MotionZ Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[2] 100
-execute store result score $PlayerX Temp run data get entity @s Pos[0] 100
-execute store result score $PlayerY Temp run data get entity @s Pos[1] 100
-execute store result score $PlayerZ Temp run data get entity @s Pos[2] 100
-execute store result entity @s Motion[0] double 0.01 run scoreboard players operation $MotionX Temp -= $PlayerX Temp
-execute store result entity @s Motion[1] double 0.01 run scoreboard players operation $MotionY Temp -= $PlayerY Temp
-execute store result entity @s Motion[2] double 0.01 run scoreboard players operation $MotionZ Temp -= $PlayerZ Temp
+scoreboard players operation @e[tag=MotionCalcTemp,limit=1,sort=nearest] X -= @s X
+scoreboard players operation @e[tag=MotionCalcTemp,limit=1,sort=nearest] Z -= @s Z
 
-kill @e[tag=DJumpTemp]
+execute store result entity @s Motion[0] double 0.001 run scoreboard players get @e[tag=MotionCalcTemp,limit=1,sort=nearest] X
+data modify entity @s Motion[1] set value 0.7d
+execute store result entity @s Motion[2] double 0.001 run scoreboard players get @e[tag=MotionCalcTemp,limit=1,sort=nearest] Z
+
+playsound minecraft:entity.player.attack.sweep master @a ~ ~ ~ .4 1.6
+playsound minecraft:entity.arrow.shoot master @a ~ ~ ~ .7 2
+execute anchored feet run particle snowflake ~ ~ ~ 0.1 0 0.1 0 10 force @a
 
 scoreboard players add @s DJumpUsed 1
-
-# execute anchored feet positioned ~ ~-0.4 ~ rotated ~ 0 run summon area_effect_cloud ^ ^ ^0.4 {NoGravity:1b,Tags:["DJumpTemp"]}
-
-# execute store result score $MotionX Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[0] 100
-# execute store result score $MotionY Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[1] 100
-# execute store result score $MotionZ Temp run data get entity @e[tag=DJumpTemp,limit=1] Pos[2] 100
-# execute store result score $PlayerX Temp run data get entity @s Pos[0] 100
-# execute store result score $PlayerY Temp run data get entity @s Pos[1] 100
-# execute store result score $PlayerZ Temp run data get entity @s Pos[2] 100
-# execute store result score $PlayerMotionX Temp run data get entity @s Motion[0] 100
-# execute store result score $PlayerMotionY Temp run data get entity @s Motion[1] 100
-# execute store result score $PlayerMotionZ Temp run data get entity @s Motion[2] 100
-# scoreboard players operation $MotionX Temp -= $PlayerX Temp
-# scoreboard players operation $MotionY Temp -= $PlayerY Temp
-# scoreboard players operation $MotionZ Temp -= $PlayerZ Temp
-# execute store result entity @s Motion[0] double 0.01 run scoreboard players operation $MotionX Temp += $PlayerMotionX Temp
-# execute store result entity @s Motion[1] double 0.01 run scoreboard players operation $MotionY Temp += $PlayerMotionY Temp
-# execute store result entity @s Motion[2] double 0.01 run scoreboard players operation $MotionZ Temp += $PlayerMotionZ Temp
-
-# kill @e[tag=DJumpTemp]
-
-# scoreboard players add @s DJumpUsed 1
+kill @e[tag=MotionCalcTemp]

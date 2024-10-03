@@ -83,19 +83,21 @@ scoreboard objectives add WallJump dummy
 scoreboard objectives add DoubleJump dummy
 scoreboard objectives add ElytraTick dummy
 
-scoreboard objectives add MotionX dummy
-scoreboard objectives add MotionY dummy
-scoreboard objectives add MotionZ dummy
+scoreboard objectives add X dummy
+scoreboard objectives add Y dummy
+scoreboard objectives add Z dummy
 
 scoreboard objectives add Const dummy
 
 scoreboard players set $-1 Const -1
+scoreboard players set $3 Const 3
 
-scoreboard objectives add ElytraTick dummy
 scoreboard objectives add DJumpUsed dummy
+scoreboard objectives add MaxDJump dummy
 scoreboard objectives add WJumpUsed dummy
 
 scoreboard players set @a WJumpUsed 0
+scoreboard players set @a MaxDJump 3
 scoreboard players set @a DJumpUsed 0
 
 team add DisablePvP

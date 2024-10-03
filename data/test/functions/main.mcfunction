@@ -14,11 +14,6 @@ function test:items/itemsystem/tick
 # Movement
 execute as @a[tag=ParkourEnabled] at @s run function test:parkour/events/tick
 
-execute as @a[scores={ElytraTick=0}] at @s run function test:parkour/actions/equip_elytra
-scoreboard players remove @a[scores={ElytraTick=1..}] ElytraTick 1
-
-execute as @a[tag=ParkourEnabled,nbt={OnGround:1b}] run function test:parkour/events/on_land
-
 
 execute as @e[scores={Tick=1..}] run scoreboard players remove @s Tick 1
 
