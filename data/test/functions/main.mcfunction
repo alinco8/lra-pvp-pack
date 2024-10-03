@@ -15,6 +15,9 @@ function test:items/itemsystem/tick
 execute as @a[tag=ParkourEnabled] at @s run function test:parkour/events/tick
 
 
+execute as @a if predicate test:on_ground run scoreboard players add @s OnGroundTick 1
+execute as @a unless predicate test:on_ground run scoreboard players set @s OnGroundTick 0
 execute as @e[scores={Tick=1..}] run scoreboard players remove @s Tick 1
 
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
+scoreboard players set @a Sneak 0

@@ -28,8 +28,3 @@ execute as @e[tag=TutaDisplay] at @s positioned ~-0.6 ~ ~-0.6 run effect give @a
 execute as @e[tag=TutaPos,tag=!Reserved] at @s unless function test:skill/tuta/actions/detect_same_score_arrow run kill @s
 
 execute as @a[tag=tuta,scores={use=1..}] at @s run function test:skill/tuta/events/on_cos
-
-#-----==== Other ====-----
-
-scoreboard players remove @e[scores={Tick=1..}] Tick 1
-scoreboard players set @a Sneak 0

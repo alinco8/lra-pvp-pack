@@ -1,3 +1,6 @@
+execute unless score @s Stamina matches 15.. run return fail
+scoreboard players remove @s Stamina 15
+
 execute anchored eyes rotated ~ 0 run summon area_effect_cloud ^ ^ ^0.4 {Tags:["MotionCalcTemp"]}
 function test:libs/pos2score
 execute as @e[tag=MotionCalcTemp] at @s run function test:libs/pos2score
