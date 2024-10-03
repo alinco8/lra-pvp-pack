@@ -7,7 +7,6 @@ give @s bread 10
 give @s arrow 32
 give @s spyglass
 give @s carrot_on_a_stick
-item replace entity @a armor.chest with elytra
 
 give @s minecraft:splash_potion{stan_grenade:1b} 16
 

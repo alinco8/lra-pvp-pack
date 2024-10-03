@@ -1,2 +1,0 @@
-summon armor_stand ~ ~ ~ {Tags:["wall_point"],NoGravity:1b,Passengers:[{id:"shulker",NoAI:1b,Passengers:[{id:"shulker",NoAI:1b,Passengers:[{id:"shulker",NoAI:1b}]}]}]}
-scoreboard players set @e[tag=wall_point,limit=1,sort=nearest] effecttime 0
