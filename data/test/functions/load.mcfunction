@@ -97,13 +97,14 @@ scoreboard objectives add MaxDJump dummy
 scoreboard objectives add WJumpUsed dummy
 scoreboard objectives add WallSliding dummy
 scoreboard objectives add Stamina dummy
-scoreboard objectives add OnGroundTick dummy
+scoreboard objectives add StaminaRestoreTick dummy
 
 scoreboard players set @a WJumpUsed 0
-scoreboard players set @a MaxDJump 3
+scoreboard players set @a MaxDJump 1
 scoreboard players set @a DJumpUsed 0
 scoreboard players set @a WallSliding 0
 scoreboard players set @a Stamina 100
+scoreboard players set @a StaminaRestoreTick 0
 
 team add DisablePvP
 team modify DisablePvP friendlyFire false

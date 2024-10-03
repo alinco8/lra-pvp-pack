@@ -11,12 +11,13 @@ execute as @e[tag=MoveFloorpoint] at @s run function test:gimmick/move_floor/act
 function test:gimmick/rope/events/tick
 function test:items/itemsystem/tick
 
-# Movement
-execute as @a[tag=ParkourEnabled] at @s run function test:parkour/events/tick
+# Parkour
+execute as @a[gamemode=!survival,gamemode=!adventure] at @s run data merge entity @s {abilities:{flySpeed:0.05}}
+execute as @a[tag=ParkourEnabled,gamemode=!creative,gamemode=!spectator] at @s run function test:parkour/events/tick
 
 
-execute as @a if predicate test:on_ground run scoreboard players add @s OnGroundTick 1
-execute as @a unless predicate test:on_ground run scoreboard players set @s OnGroundTick 0
+
+execute as @e[scores={StaminaRestoreTick=1..}] run scoreboard players remove @s StaminaRestoreTick 1
 execute as @e[scores={Tick=1..}] run scoreboard players remove @s Tick 1
 
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
