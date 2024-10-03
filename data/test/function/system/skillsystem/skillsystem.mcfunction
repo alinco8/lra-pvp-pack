@@ -6,6 +6,7 @@ function test:skill/hunter
 function test:skill/water/events/tick
 function test:skill/battou/battounew
 function test:skill/hunter/scythe/events/tike
+function test:skill/hunter/system/tick
 
 #-----==== Penetrate ====-----
 execute as @a[tag=penetrate] at @s run function test:skill/penetrate/events/tick
