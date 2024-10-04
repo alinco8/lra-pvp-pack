@@ -1,0 +1,1 @@
+execute as @a[tag=acceleration] at @s run function test:skill/acceleration/events/player/tick

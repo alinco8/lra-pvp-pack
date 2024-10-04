@@ -1,0 +1,1 @@
+- nbt系をpredicateに全部変える

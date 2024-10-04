@@ -1,0 +1,1 @@
+title @s title [{"text":"||","obfuscated":true,"color":"red"}, {"text":"勝利","color":"gold", "obfuscated":false}, {"text":"||","obfuscated":true,"color":"red"}]

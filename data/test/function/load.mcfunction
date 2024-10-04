@@ -1,110 +1,113 @@
-say スコアをリセットしました
-
-scoreboard objectives add ID dummy
+# 自動減算スコア (0~)
 scoreboard objectives add Tick dummy
+
+# しゃがみ中(0~1)
 scoreboard objectives add Sneak custom:sneak_time
 
-
+# 一時
 scoreboard objectives add Temp dummy
 
-scoreboard objectives add id dummy
-#にんじん棒の右クリ用スコア作成 use
-scoreboard objectives add use minecraft.used:minecraft.carrot_on_a_stick
-#useスコア リセット
-scoreboard players set @a use 0
-#クールタイムスコア 作成
-scoreboard objectives add cooltime dummy
-#クールタイムスコア リセット
-scoreboard players set @a cooltime 0
-#スキルつたのつたブロックができるまでの時間用スコア 作成
-scoreboard objectives add tutatime dummy
-#受けたダメージスコア 作成 removedamage
-scoreboard objectives add removedamage minecraft.custom:damage_taken
-#removedamageスコア リセット
-scoreboard players set @a removedamage 0
-#動作してからの追加時間 トリガー用スコア 作成
-scoreboard objectives add actiontime dummy
-#actiontimeスコア リセット
-scoreboard players set @a actiontime -1
-#どれだけの時間効果を持たせるか
-scoreboard objectives add effecttime dummy
-#effecttime リセット
-scoreboard players set @a effecttime 0
-#スノウゴーレムを殺した数スコア 作成
-scoreboard objectives add snowgolemkill minecraft.killed:minecraft.snow_golem
-#snowgolemkillスコア リセット
-scoreboard players set @a snowgolemkill 0
-#デバッグ用スコア作成
-scoreboard objectives add test dummy
-#燃焼ダメージの継続時間スコア 作成
-scoreboard objectives add firedamage dummy
-#firedamageのスコア リセット
-scoreboard players set @a firedamage 0
-#ヴェックスを殺した数スコア 作成
-scoreboard objectives add vexkill minecraft.killed:minecraft.vex
-#
-scoreboard players set @a vexkill 0
-#地面を走っている時増加するスコア 作成
-scoreboard objectives add running minecraft.custom:minecraft.sprint_one_cm
-#runスコア リセット
-scoreboard players set @a running 0
-#走っている時間
-scoreboard objectives add runcount dummy
-#runcountスコア リセット
-scoreboard players set @a runcount 0
-#デス数カウントスコア 作成
-scoreboard objectives add death deathCount
-#deahtスコア リセット
-scoreboard players set @a death 0
-#残り人数スコア 作成
-scoreboard objectives add survivor dummy
-#
-scoreboard objectives add skillselect dummy
+# ID
+scoreboard objectives add ID dummy
 
-scoreboard objectives add battou dummy
-#
-scoreboard players set @a battou 0
+# 人参棒の使用 (0~1)
+scoreboard objectives add Use minecraft.used:minecraft.carrot_on_a_stick
+scoreboard players set @a Use 0
 
-scoreboard objectives add game_running dummy
+# CoolTime (0=)
+scoreboard objectives add CoolTime dummy
+scoreboard players set @a CoolTime 0
 
-scoreboard players set @a game_running 0
+# ツタが枯れるまでの時間
+scoreboard objectives add TutaTime dummy
 
-scoreboard objectives add Tick dummy
+# 動作してからの追加時間
+# scoreboard objectives add ActionTime dummy
+# scoreboard players set @a ActionTime -1
 
-scoreboard objectives add itemuse minecraft.used:minecraft.warped_fungus_on_a_stick
+# どれだけの時間効果を持たせるか
+scoreboard objectives add EffectTime dummy
+scoreboard players set @a EffectTime 0
 
-scoreboard players set @a itemuse 0
+# スノウゴーレムを殺した数
+scoreboard objectives add SnowGolemKill minecraft.killed:minecraft.snow_golem
+scoreboard players set @a SnowGolemKill 0
 
-scoreboard objectives add elytra minecraft.custom:aviate_one_cm
+# デバッグ用
+scoreboard objectives add Test dummy
 
-scoreboard players set @a elytra 0
+# 燃焼ダメージの継続時間
+scoreboard objectives add FireDamage dummy
+scoreboard players set @a FireDamage 0
 
-scoreboard objectives add WallJump dummy
-scoreboard objectives add DoubleJump dummy
-scoreboard objectives add ElytraTick dummy
+# ヴェックスを殺した数
+scoreboard objectives add VexKill minecraft.killed:minecraft.vex
+scoreboard players set @a VexKill 0
 
+# 地面を走っているか(0~1)
+scoreboard objectives add Running minecraft.custom:minecraft.sprint_one_cm
+scoreboard players set @a Running 0
+
+# 連続で走ってるtick数
+scoreboard objectives add RunCount dummy
+scoreboard players set @a RunCount 0
+
+# 死亡してるかどうか
+scoreboard objectives add Death deathCount
+
+# 残り人数スコア
+scoreboard objectives add SurvivorCount dummy
+
+# スキルセレクターで選択中のスキル
+scoreboard objectives add SkillSelect dummy
+
+# 抜刀
+scoreboard objectives add Battou dummy
+scoreboard players set @a Battou 0
+
+# ゲームが実行中かどうか
+scoreboard objectives add GameRunning dummy
+
+
+# XYZ保存用
 scoreboard objectives add X dummy
 scoreboard objectives add Y dummy
 scoreboard objectives add Z dummy
 
+# 定数
 scoreboard objectives add Const dummy
 
-scoreboard players set $-1 Const -1
-scoreboard players set $3 Const 3
-
+# DoubleJump回数
 scoreboard objectives add DJumpUsed dummy
-scoreboard objectives add MaxDJump dummy
-scoreboard objectives add WJumpUsed dummy
-scoreboard objectives add WallSliding dummy
-scoreboard objectives add Stamina dummy
-scoreboard objectives add StaminaRestoreTick dummy
-
-scoreboard players set @a WJumpUsed 0
-scoreboard players set @a MaxDJump 1
 scoreboard players set @a DJumpUsed 0
+
+# 最大DoubleJump回数
+scoreboard objectives add MaxDJump dummy
+scoreboard players set @a MaxDJump 1
+
+# WallJump回数
+scoreboard objectives add WJumpUsed dummy
+scoreboard players set @a WJumpUsed 0
+
+# WallSlide中 (0~1)
+scoreboard objectives add WallSliding dummy
 scoreboard players set @a WallSliding 0
+
+# スタミナ
+scoreboard objectives add Stamina dummy
 scoreboard players set @a Stamina 100
+
+# スタミナが回復し始めるまでのtick数
+scoreboard objectives add StaminaRestoreTick dummy
 scoreboard players set @a StaminaRestoreTick 0
 
+## 観戦、ロビー
 team add DisablePvP
 team modify DisablePvP friendlyFire false
+
+## PvP中
+team add PvP
+team modify PvP nametagVisibility never
+
+
+tellraw @a "Datapack Reloaded!"

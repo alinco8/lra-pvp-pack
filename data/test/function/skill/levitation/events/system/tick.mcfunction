@@ -1,0 +1,1 @@
+execute as @a[tag=levitation] at @s run function test:skill/levitation/events/player/tick

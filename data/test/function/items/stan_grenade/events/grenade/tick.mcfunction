@@ -1,0 +1,1 @@
+execute if entity @s[tag=!Init] run function test:items/stan_grenade/events/grenade/on_init

@@ -1,0 +1,1 @@
+give @s minecraft:tipped_arrow[potion_contents={custom_color:17663},custom_name='{"text":"水の矢"}',custom_data={water_arrow:1b}]

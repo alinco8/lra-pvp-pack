@@ -1,0 +1,1 @@
+title @s title [{"text":"敗北","color":"blue"}]

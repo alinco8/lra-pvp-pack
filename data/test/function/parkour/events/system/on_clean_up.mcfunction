@@ -1,0 +1,1 @@
+execute as @a run data merge entity @s {abilities:{flySpeed:0.05,mayfly:false}}

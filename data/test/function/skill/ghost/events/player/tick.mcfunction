@@ -1,0 +1,1 @@
+execute if score @s Use matches 1 run function test:skill/ghost/events/player/on_cos

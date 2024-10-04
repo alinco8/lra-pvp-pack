@@ -1,0 +1,2 @@
+execute as @e[type=snowball,nbt={Item:{components:{"minecraft:custom_data":{smoke_grenade:1b}}}}] at @s run function test:items/smoke_grenade/events/grenade/tick
+execute as @e[tag=SmokeGrenadeRider] at @s run function test:items/smoke_grenade/events/rider/tick
