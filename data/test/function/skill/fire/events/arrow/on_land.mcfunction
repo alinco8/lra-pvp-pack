@@ -1,1 +1,1 @@
-summon creeper ~ ~ ~ {Fuse:0}
+summon fireball ~ ~-1 ~ {Motion:[0.0d,-1.0d,0.0d]}
