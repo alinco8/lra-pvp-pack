@@ -1,6 +1,14 @@
 {
-  "pack": {
-    "pack_format": 48,
-    "description": "test"
-  }
+	"pack": {
+		"pack_format": 61,
+		"description": "test"
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "animated_java",
+				"formats": 61
+			}
+		]
+	}
 }

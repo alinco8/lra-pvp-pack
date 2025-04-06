@@ -29,7 +29,7 @@ scoreboard objectives add TutaTime dummy
 scoreboard objectives add EffectTime dummy
 scoreboard players set @a EffectTime 0
 
-# スノウゴーレムを殺した数
+# スノーゴーレムを殺した数
 scoreboard objectives add SnowGolemKill minecraft.killed:minecraft.snow_golem
 scoreboard players set @a SnowGolemKill 0
 

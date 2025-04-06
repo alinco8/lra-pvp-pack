@@ -1,1 +1,1 @@
-summon armor_stand ~ ~1 ~ {Tags:["rope_point","rope"],NoGravity:1b,Invisible:1b,Passengers:[{id:"block_display",block_state:{Name:"chain"},Tags:["rope_chain","rope"],transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[-0.5f,-2f,-0.5f]}}]}
+summon armor_stand ~ ~1 ~ {Tags:["rope_point","rope"],NoGravity:1b,Invisible:1b,Passengers:[{id:"block_display",block_state:{Name:"chain"},Tags:["rope_chain","rope"],transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[-0.5f,0f,-0.5f]}}]}
