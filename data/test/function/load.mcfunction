@@ -44,7 +44,7 @@ scoreboard players set @a FireDamage 0
 scoreboard objectives add VexKill minecraft.killed:minecraft.vex
 scoreboard players set @a VexKill 0
 
-# 地面を走っているか(0~1)
+# 地面を走っているか(0~1) なくてもいいかも
 scoreboard objectives add Running minecraft.custom:minecraft.sprint_one_cm
 scoreboard players set @a Running 0
 
@@ -74,6 +74,14 @@ scoreboard objectives add X dummy
 scoreboard objectives add Y dummy
 scoreboard objectives add Z dummy
 
+#weaponsのサブスキル関係_xyz
+scoreboard objectives add Scatter_x dummy
+scoreboard objectives add Scatter_y dummy
+scoreboard objectives add Scatter_z dummy
+
+scoreboard objectives add Weapon_skill_use dummy
+scoreboard players set @a Weapon_skill_use 0
+
 # 定数
 scoreboard objectives add Const dummy
 
@@ -83,11 +91,15 @@ scoreboard players set @a DJumpUsed 0
 
 # 最大DoubleJump回数
 scoreboard objectives add MaxDJump dummy
-scoreboard players set @a MaxDJump 1
+scoreboard players set @a MaxDJump 0
 
 # WallJump回数
 scoreboard objectives add WJumpUsed dummy
 scoreboard players set @a WJumpUsed 0
+
+# WallJump有無
+scoreboard objectives add MaxWJump dummy
+scoreboard players set @a MaxWJump 0
 
 # WallSlide中 (0~1)
 scoreboard objectives add WallSliding dummy
@@ -101,6 +113,10 @@ scoreboard players set @a Stamina 100
 scoreboard objectives add StaminaRestoreTick dummy
 scoreboard players set @a StaminaRestoreTick 0
 
+# 足跡の発生間隔
+scoreboard objectives add FootPrints dummy
+scoreboard players set @a FootPrints 40
+
 ## 観戦、ロビー
 team add DisablePvP
 team modify DisablePvP friendlyFire false
@@ -110,4 +126,4 @@ team add PvP
 team modify PvP nametagVisibility never
 
 
-tellraw @a "Datapack Reloaded!"
+tellraw @a "Datapack Reloaded! vr test"

@@ -1,1 +1,0 @@
-clear @s carrot_on_a_stick[minecraft:attribute_modifiers=[{type: generic.attack_damage , amount: 10, id: scythe_damege, slot: mainhand, operation: add_multiplied_total}, {type:"generic.attack_speed" , amount:-0.8 , id: scythe_sp , slot: "mainhand" , operation: "add_multiplied_total"}]]

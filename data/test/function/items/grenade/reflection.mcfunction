@@ -1,0 +1,3 @@
+execute as @e[type=potion] at @s unless block ~-1 ~ ~ air store result entity @s Motion[0] double 0.001 run scoreboard players operation @s xBounce *= -1 bounceConst
+execute as @e[type=potion] at @s unless block ~ ~-1 ~ air store result entity @s Motion[1] double 0.001 run scoreboard players operation @s yBounce *= -1 bounceConst
+execute as @e[type=potion] at @s unless block ~ ~ ~-1 air store result entity @s Motion[2] double 0.001 run scoreboard players operation @s zBounce *= -1 bounceConst

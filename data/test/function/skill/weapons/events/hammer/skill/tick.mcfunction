@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=Scatter] at @s run function test:skill/weapons/events/hammer/skill/scatter

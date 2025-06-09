@@ -1,3 +1,3 @@
-particle minecraft:campfire_signal_smoke ~ ~2 ~ 2 2 2 0.01 200 force @a
+particle minecraft:campfire_signal_smoke ~ ~1 ~ 1.5 1.5 1.5 0.0001 500 force @a
 
 kill @s

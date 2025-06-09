@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=Condense] at @s run function test:skill/weapons/events/scythe/skill/condense

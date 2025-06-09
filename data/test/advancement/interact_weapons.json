@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "select_weapon": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:interaction",
+            "nbt": "{Tags:[\"summoning_weapons\"]}"
+          }
+        }
+      }
+    },
+    "requirements": [["select_weapon"]],
+    "rewards": {
+      "function": "test:skill/weapons/events/hammer/hammer_select"
+    }
+  }

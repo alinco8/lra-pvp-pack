@@ -1,1 +1,0 @@
-execute as @a[tag=neon] at @s run function test:skill/neon/events/player/tick

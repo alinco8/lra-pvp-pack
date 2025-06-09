@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "attack_interaction": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:interaction",
+            "nbt": "{Tags:[\"summoning_weapons\"]}"
+          }
+        }
+      }
+    },
+    "requirements": [["attack_interaction"]],
+    "rewards": {
+      "function": "test:skill/weapons/events/scythe/scythe_select"
+    }
+  }

@@ -14,7 +14,7 @@ scoreboard players set @a[scores={Use=1..}] Use 0
 scoreboard players remove @a[scores={CoolTime=1..}] CoolTime 1
 scoreboard players remove @e[scores={TutaTime=0..}] TutaTime 1
 # scoreboard players remove @e[tag=!noremove,scores={ActionTime=0..}] ActionTime 1
-scoreboard players remove @e[scores={EffectTime=1..}] EffectTime 1
+scoreboard players remove @e[tag=!cannot_remove,scores={EffectTime=1..}] EffectTime 1
 scoreboard players add @a[scores={Running=1..}] RunCount 1
 execute as @e[scores={StaminaRestoreTick=1..}] run scoreboard players remove @s StaminaRestoreTick 1
 execute as @e[scores={Tick=1..}] run scoreboard players remove @s Tick 1
